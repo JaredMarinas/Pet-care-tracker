@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { usePets } from "./PetsContext.jsx";
+import { usePets } from "./data/usePets.js";
 import NavButton from "./navbutton.jsx";
 import Profile from "./profile.jsx";
 import TodayLogs from "./TodayLogs.jsx";
@@ -38,8 +38,8 @@ function vaccineColor(date) {
   return "text-green-300";
 }
 
-export default function Home({ logs, onAddLog, onToggleLog }) {
-  const { pets } = usePets();
+export default function Home() {
+  const { pets, logs, addLog, toggleLog } = usePets();
   const { petId } = useParams();
   const pet = pets[petId];
 
@@ -75,11 +75,11 @@ export default function Home({ logs, onAddLog, onToggleLog }) {
         </div>
 
         <div className="lg:col-span-2 lg:row-span-2">
-          <TodayLogs
+         <TodayLogs
             petId={petId}
             logs={visibleLogs}
-            onAdd={onAddLog}
-            onToggle={onToggleLog}
+            onAdd={addLog}
+            onToggle={toggleLog}
           />
         </div>
 

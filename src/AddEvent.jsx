@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { usePets } from "./PetsContext.jsx";
+import { usePets } from "./data/usePets.js";
 
 const inputClass =
   "w-full bg-[#1c1c1e] border border-gray-500 rounded-lg p-2 text-base text-white [color-scheme:dark]";

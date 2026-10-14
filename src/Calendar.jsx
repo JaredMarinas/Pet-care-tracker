@@ -1,5 +1,5 @@
 import { useParams, NavLink, Link } from "react-router-dom";
-import { usePets } from "./PetsContext.jsx";
+import { usePets } from "./data/usePets.js";
 
 const ICONS = { vaccine: "💉", vet: "🩺", treatment: "💊", grooming: "✂️" };
 
